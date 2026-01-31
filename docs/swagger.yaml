@@ -1,0 +1,80 @@
+definitions:
+  app.Response:
+    properties:
+      code:
+        type: integer
+      data:
+        type: object
+      msg:
+        type: string
+    type: object
+info:
+  contact: {}
+  license: {}
+paths:
+  /api/v1/es/log:
+    post:
+      parameters:
+      - description: id
+        in: body
+        name: id
+        schema:
+          type: string
+      - description: hostIp
+        in: body
+        name: hostIp
+        schema:
+          type: string
+      - description: clientIp
+        in: body
+        name: clientIp
+        schema:
+          type: string
+      - description: logLevel
+        in: body
+        name: logLevel
+        schema:
+          type: string
+      - description: subtype
+        in: body
+        name: subtype
+        schema:
+          type: string
+      - description: type
+        in: body
+        name: type
+        schema:
+          type: string
+      - description: page
+        in: body
+        name: page
+        schema:
+          type: string
+      - description: size
+        in: body
+        name: size
+        schema:
+          type: string
+      - description: startTime
+        in: body
+        name: startTime
+        schema:
+          type: string
+      - description: endTime
+        in: body
+        name: endTime
+        schema:
+          type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/app.Response'
+        "500":
+          description: Internal Server Error
+          schema:
+            $ref: '#/definitions/app.Response'
+      summary: Get elasticsearch log
+swagger: "2.0"

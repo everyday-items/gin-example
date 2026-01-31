@@ -1,0 +1,35 @@
+{
+    "permissions": {
+      "allow": [
+        "Bash(cat:*)",
+        "Bash(bun install:*)",
+        "Bash(go mod:*)",
+        "Bash(where go)",
+        "Bash(curl:*)",
+        "Bash(go run:*)",
+        "Bash(netstat:*)",
+        "Bash(findstr:*)",
+        "Bash(done)",
+        "Bash(bun run:*)",
+        "Bash(dir:*)",
+        "WebSearch",
+        "Bash(claude mcp add:*)",
+        "Bash(claude mcp:*)",
+        "Bash(timeout:*)",
+        "Bash(git init:*)",
+        "Bash(git add:*)",
+        "Bash(claude config:*)",
+        "Bash(sqlite3:*)",
+        "Bash(find:*)",
+        "Bash(go build:*)"
+      ],
+      "deny": [],
+      "ask": [],
+      "fileReadOptions": {
+          "maxTokensPerRead": 10000,
+          "enablePagination": true,
+          "defaultViewRange": 100
+      }
+    }
+  }
+  
